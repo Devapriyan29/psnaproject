@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <center>
+        <div class="page">
+    <h2>Login</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p style="color: {% if category == 'danger' %}red{% elif category == 'success' %}green{% else %}black{% endif %};">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" action="{{ url_for('login') }}">
+
+        <label>Username:</label>
+        <input type="text" name="username" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+        </center>
+    </form>
+    </div>
+</body>
+
+<style>
+    {% block styling%}
+    body{
+    background-image:url("https://images.shiksha.com/mediadata/images/1494915589phpiDzgg8.png");
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: 1500px 700px;
+    position:fixed;
+    }
+    .page{
+    margin-top:200px;
+    margin-left:550px;
+    border-style:solid;
+    width:280px;
+    height:250px;
+    border-color:black;
+    background-color:#174431;
+
+    }
+
+
+    {% endblock %}
+</style>
+
+
+</html>

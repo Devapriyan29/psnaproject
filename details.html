@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="profile-container">
+    <header class="profile-header">
+      <h1>Student Profile</h1>
+    </header>
+    <div class="profile-content">
+      <div class="profile-header">
+
+        <h2>{{ne}}</h2>
+      </div>
+      <div class="profile-details">
+        <div class="personal-details">
+          <h3>Personal Details</h3>
+          <p><strong>Date of Birth:</strong> {{da}}</p>
+            <p><strong>Mobile Number:</strong> {{mo}}</p>
+          <p><strong>Personal-Email:</strong> {{pmail}}</p>
+          <p><strong>Father's Name:</strong> {{fath}}</p>
+          <p><strong>Father's Number:</strong> {{fathm}}</p>
+
+          <p><strong>Community:</strong> {{com}}</p>
+          <p><strong>Blood Group:</strong> {{bg}}</p>
+        </div>
+        <div class="class-details">
+          <h3>Class Details</h3>
+          <p><strong>Registration Number:</strong> {{reg}}</p>
+
+          <p><strong>Official-Email:</strong> {{mai}}</p>
+
+          <p><strong>Days scholar/Hostel:</strong> {{dohh}}</p>
+          <p><strong>Status:</strong> Active</p>
+        </div>
+
+  </div>
+</body>
+
+<style>
+  {% block styling %}
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  }
+
+.profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.profile-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-content {
+  padding: 20px;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+.profile-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.personal-details, .class-details {
+  width: 48%;
+}
+
+.personal-details h3, .class-details h3 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.update-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+  {% endblock %}
+</style>
+</html>
+
