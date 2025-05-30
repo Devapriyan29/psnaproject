@@ -24,21 +24,50 @@
           <p><strong>Personal-Email:</strong> {{pmail}}</p>
           <p><strong>Father's Name:</strong> {{fath}}</p>
           <p><strong>Father's Number:</strong> {{fathm}}</p>
-
+          <p><strong>Father's Annual Income:</strong> {{income}}</p>
           <p><strong>Community:</strong> {{com}}</p>
           <p><strong>Blood Group:</strong> {{bg}}</p>
+          <p><strong>Aadhar no:</strong> {{adhar}}</p>
+
+
+
+           <div class="school-deatils">
+          <h3>School details</h3>
+          <p><strong>School name:</strong> {{sn}}</p>
+            <p><strong>School Type:</strong> {{st}}</p>
+          <p><strong>City:</strong> {{ct}}</p>
+          <p><strong>Medium:</strong> {{mdm}}</p>
+
+
+          <p><strong>10th percentage:</strong> {{ten}}</p>
+             <p><strong>11th percentage:</strong> {{ele}}</p>
+
+             <p><strong>12th percentage:</strong> {{twel}}</p>
+             <p><strong>12th cutt-off:</strong> {{cut}}</p>
+
+
+
+
+
+         </div>
+
+
         </div>
         <div class="class-details">
           <h3>Class Details</h3>
           <p><strong>Registration Number:</strong> {{reg}}</p>
 
           <p><strong>Official-Email:</strong> {{mai}}</p>
+          <p><strong>Seat Type:</strong> {{seatt}}</p>
 
           <p><strong>Days scholar/Hostel:</strong> {{dohh}}</p>
           <p><strong>Status:</strong> Active</p>
         </div>
 
   </div>
+      <button id="down">Download</button>
+
+
 </body>
 
 <style>
@@ -58,6 +87,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+
 }
 .profile-header {
   background-color: #007bff;
@@ -88,7 +118,7 @@ h2 {
   margin-top: 20px;
 }
 
-.personal-details, .class-details {
+.personal-details, .class-details, school-deatils{
   width: 48%;
 }
 
@@ -112,11 +142,24 @@ h2 {
 .update-btn:hover {
   background-color: #0056b3;
 }
-
+#down{
+width:150px;
+height:30px;
+font-size:15px;
+border-radius:5px;
+border:none;
+background-color:#00BB0A;
+}
+#down:hover{
+cursor:pointer;
+transform:scale(1.1);
+}
 
 
 
   {% endblock %}
 </style>
 </html>
+
+
 
